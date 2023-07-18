@@ -1,5 +1,7 @@
 clc, clear, close all
 
+% Set up as needed---------------------------------------------------------
+
 % Videos to cluster
 dataDir = 'RealDatasets\';
 filename = ["Koi_5652_952_540", "Pigeons_4927_960_540_600f",...
@@ -17,6 +19,8 @@ ft = 'RGB'; % feature type
 % Paramaters for methods
 tau = 2.8;                            % threshold for setting a new cluster
 PARAM.tau = tau;          % similarity threshold for a new clusters [Kul18]
+
+%--------------------------------------------------------------------------
 
 % Iterate through values of gamma
 for pc = 1:numel(propC)
